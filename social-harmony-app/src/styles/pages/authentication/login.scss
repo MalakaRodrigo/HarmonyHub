@@ -1,0 +1,201 @@
+@import "../../common.scss";
+@import "../../animation.scss";
+
+.login-container {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  margin-left: -10px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: opacity 0.5s ease;
+
+  .not-a-member {
+    font-size: 10px;
+
+    .underline {
+      text-decoration: underline;
+
+      &:hover {
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .widget-holder {
+    background-image: url("../../../assets/images/auth_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    padding: 90px;
+    margin-left: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .widget-card {
+    border-radius: 10px;
+    padding: 80px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+  }
+
+  .text-area {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    /* Initially set opacity to 0 */
+    opacity: 0;
+
+    /* Apply the fade-in animation */
+    animation: fadeIn 1s ease-in-out forwards;
+
+    h4 {
+      font-weight: 300;
+    }
+
+    /* Add transition for background color */
+    transition: background-color 0.5s ease-in-out;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .form-holder {
+    width: 1000px;
+    padding: 90px;
+    margin: 10px;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    background-image: url("../../../assets/images/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px;
+    margin-left: 30px;
+  }
+
+  .form-card {
+    padding: 40px;
+    margin: 10px;
+  }
+
+  .form-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .login-field {
+    // border-left: none;
+    // border-right: none;
+    // border-top: none;
+    background-color: transparent;
+    // border-width: 2px;
+    border-radius: 0.2rem;
+    // margin-bottom: 0;
+    label {
+      font-weight: 700;
+      &::before {
+        display: none;
+      }
+    }
+    .ant-input {
+      background-color: transparent;
+      font-weight: 400;
+      font-size: 0.8rem;
+    }
+    &:hover {
+      border-color: $primary-color;
+    }
+    &:focus,
+    &:active {
+      border-color: $primary-color;
+    }
+    &.ant-input-affix-wrapper:focus,
+    &.ant-input-affix-wrapper-focused {
+      outline-color: $primary-color;
+      box-shadow: none;
+      // box-shadow: 0px 0px 0.4rem $primary-color;
+    }
+    input[type="password"] {
+      &::placeholder {
+        letter-spacing: 0;
+      }
+    }
+    &.password {
+      margin-bottom: 0;
+    }
+    &.remember {
+      margin-top: 0;
+    }
+    &.forgot-wrapper {
+      margin-bottom: 2rem;
+      display: inline-block;
+    }
+    &.otp {
+      width: 21rem;
+      font-size: 2.5rem;
+      text-align: left;
+      font-weight: 800;
+      border-radius: 0;
+      border-width: 0 0 3px 0;
+      margin: 0 0.5rem 2rem 0rem;
+      letter-spacing: 1.5rem;
+      padding: 0 0 0 1.1rem;
+      &:focus,
+      &:hover {
+        outline: none;
+        box-shadow: none;
+        border-width: 0 0 3px 0 !important ;
+      }
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+    &.no-margin-bottom {
+      margin-bottom: 0;
+    }
+    &.twofa {
+      background-color: transparent;
+      font-weight: 700;
+      font-size: 2.2rem;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #90caf9;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  button {
+    padding: 10px;
+    background: linear-gradient(to right, #1976d2, #2196f3);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 100px;
+    margin-right:   100px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+}

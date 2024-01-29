@@ -1,0 +1,50 @@
+.Logo {
+  position: fixed;
+  align-items: center;
+  top: 0%;  // Adjust this value if you want a fixed distance from the top
+  left: 0; // Adjust this value if you want a fixed distance from the left
+  right: 0; // Adjust this value if you want a fixed distance from the right
+  bottom: 0; // Adjust this value if you want a fixed distance from the bottom
+  margin-top: 0px; // This centers the Logo both horizontally and vertically
+  z-index: 0; // Set a z-index value if needed to control stacking order   width: 175px;
+  height: 15%;
+  background-color: white;
+  transition: left 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  .Logo-image-300 {
+    width: 300px;
+    height: auto; // The height will be adjusted proportionally based on the width
+    display: block;
+  }
+
+  // Add additional styles for the logo image or Logo component if needed
+}
+
+.SideBarLogo {
+  align-items: center;
+  left: 0; // Adjust this value if you want a fixed distance from the left
+  right: 0; // Adjust this value if you want a fixed distance from the right
+  bottom: 0; // Adjust this value if you want a fixed distance from the bottom
+  margin-top: 0px; // This centers the Logo both horizontally and vertically
+  margin-bottom: 100px; // This centers the Logo both horizontally and vertically
+  z-index: 0; // Set a z-index value if needed to control stacking order   width: 175px;
+  height: 15%;
+  background-color: white;
+  transition: left 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  .Logo-image-200 {
+    width: 200px;
+    height: auto; // The height will be adjusted proportionally based on the width
+    display: block;
+  }
+  .Logo-image-50 {
+    margin-left: 120px;
+    width: 50px;
+    height: auto; // The height will be adjusted proportionally based on the width
+    display: block;
+  }
+
+  // Add additional styles for the logo image or Logo component if needed
+}
