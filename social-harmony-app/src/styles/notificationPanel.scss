@@ -1,0 +1,52 @@
+// NotificationPanel.scss
+
+.notification-panel {
+    position: fixed;
+    top: 55px;
+    right: 90px;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  
+  .notification {
+    background-color: #f8d7da; // Light red background color
+    color: #721c24; // Dark red text color
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #f5c6cb; // Border color
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    &.success {
+      background-color: #d4edda; // Light green background color for success
+      color: #155724; // Dark green text color for success
+      border-color: #c3e6cb; // Border color for success
+    }
+  
+    &.info {
+      background-color: #d1ecf1; // Light blue background color for info
+      color: #0c5460; // Dark blue text color for info
+      border-color: #bee5eb; // Border color for info
+    }
+  
+    &.warning {
+      background-color: #fff3cd; // Light yellow background color for warning
+      color: #856404; // Dark yellow text color for warning
+      border-color: #ffeeba; // Border color for warning
+    }
+  
+    &.error {
+      background-color: #f8d7da; // Light red background color for error
+      color: #721c24; // Dark red text color for error
+      border-color: #f5c6cb; // Border color for error
+    }
+  
+    .close-btn {
+      cursor: pointer;
+    }
+  }
+  

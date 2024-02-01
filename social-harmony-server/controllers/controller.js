@@ -3,7 +3,7 @@ const service = require("../services/services");
 
 // Define controller functions
 const logInController = (req, res) => {
-  const data = service.getData(); // Call a service function
+  const data = service.getData(req);
   res.json(data);
 };
 

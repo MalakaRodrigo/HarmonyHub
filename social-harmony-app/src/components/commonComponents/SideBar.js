@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCoffee,
   faMusic,
   faCode,
   faBook,
-  faFilm,
-  faGamepad,
-} from "@fortawesome/free-solid-svg-icons"; // Import different icons
+} from "@fortawesome/free-solid-svg-icons";
 import logo from "../../assets/images/logo.png";
 import logoOnly from "../../assets/images/logoOnly.png";
 import SideBarLogo from "./SideBarLogo";
+import "../../styles/SideBar.scss";
 
 const Sidebar = ({ getSideBarStatus }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -40,16 +39,23 @@ const Sidebar = ({ getSideBarStatus }) => {
       onMouseLeave={handleMouseLeave}
     >
       <ul>
-        <SideBarLogo logo={isHovered ? logo : logoOnly} logoWidth={isHovered ? 200 : 50}/>
+        <SideBarLogo
+          logo={isHovered ? logo : logoOnly}
+          logoWidth={isHovered ? 200 : 50}
+        />
         {menuItems.map((menuItem, index) => (
           <li key={index}>
-           {isHovered && <span className="padded-icons-left">
-              <FontAwesomeIcon icon={menuItem.icon} />
-            </span>}
+            {isHovered && (
+              <span className="padded-icons-left">
+                <FontAwesomeIcon icon={menuItem.icon} />
+              </span>
+            )}
             {menuItem.label}
-            {!isHovered && <span className="padded-icons-right">
-              <FontAwesomeIcon icon={menuItem.icon} />
-            </span>}
+            {!isHovered && (
+              <span className="padded-icons-right">
+                <FontAwesomeIcon icon={menuItem.icon} />
+              </span>
+            )}
           </li>
         ))}
       </ul>

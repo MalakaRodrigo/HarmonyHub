@@ -1,6 +1,6 @@
 import { all, call, put, takeLatest } from "redux-saga/effects";
 import envConfig from "../../config";
-import { logIn, signUp } from "../routines";
+import { logIn, signUp, logOut } from "../routines";
 import { request } from "../../common/util/RestClient.js";
 
 export function* logInSaga({ payload }) {
@@ -14,10 +14,19 @@ export function* logInSaga({ payload }) {
 
     const response = yield call(request, URL, config);
     const { data } = response;
+    console.log(response)
 
     yield put(logIn.success(data));
   } catch (error) {
     yield put(logIn.failure({ error, noAlert: true }));
+  }
+}
+
+export function* logOutSaga() {
+  try {
+    yield put(logOut.success());
+  } catch (error) {
+    yield put(logOut.failure({ error, noAlert: true }));
   }
 }
 
@@ -32,6 +41,8 @@ export function* SignUpSaga({ payload }) {
 
     const response = yield call(request, URL, config);
     const { data } = response;
+
+    console.log(data);
 
     yield put(signUp.success(data));
   } catch (error) {

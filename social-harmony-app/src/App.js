@@ -7,6 +7,7 @@ import Login from "./pages/authentication/Login";
 import SignUp from "./pages/authentication/SignUp";
 import { Provider } from "react-redux";
 import store from "./store/store";
+import SettingsPage from "./components/settings";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route exact path="/" element={<Login />} />
             <Route exact path="/signup" element={<SignUp />} />
             <Route exact path="/dashboard" element={<Dashboard />} />
+            <Route exact path="/settings" element={<SettingsPage />} />
           </Routes>
         </div>
       </Router>

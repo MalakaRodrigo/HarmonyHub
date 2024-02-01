@@ -2,8 +2,8 @@
   position: fixed;
   align-items: center;
   top: 0%;  // Adjust this value if you want a fixed distance from the top
-  left: 250px; // Adjust this value if you want a fixed distance from the left
-  right: 100px; // Adjust this value if you want a fixed distance from the right
+  left: 100px;
+  right: 0px; // Adjust this value if you want a fixed distance from the right
   bottom: 0; // Adjust this value if you want a fixed distance from the bottom
   margin-top: 0px; // This centers the Logo both horizontally and vertically
   z-index: 0; // Set a z-index value if needed to control stacking order   width: 175px;
@@ -14,6 +14,10 @@
   justify-content: space-between;
 
     .auth-btn {
-      background-color: white;
+      margin-right: 350px;
+      background-color: rgb(147, 40, 40);
+    }
+    .notification-panel {
+      
     }
   }

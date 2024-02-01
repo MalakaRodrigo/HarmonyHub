@@ -2,9 +2,9 @@ const User = require('../models/userSchema')
 const { getDB } = require('../database/dbConnection');
 
 // Define service functions
-const getData = () => {
-    // Perform data retrieval or processing here
-    return { message: 'Hello from the service!' };
+const getData = (req) => {
+  console.log(req.body);
+    return { message: ' Success', data: {name: 'Malaka Rodrigo', ...req.body} };
   };
 
 const setCreateUserData = async (payload) => {

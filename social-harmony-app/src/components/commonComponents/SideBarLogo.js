@@ -1,4 +1,3 @@
-// src/components/Logo.js
 import '../../styles/Logo.scss';
 
 const SideBarLogo = ({ logo, align, logoWidth }) => {

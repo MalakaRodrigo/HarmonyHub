@@ -2,6 +2,8 @@ import { createRoutine } from 'redux-saga-routines';
 
 export const logIn = createRoutine('LOG_IN');
 export const signUp = createRoutine('SIGN_UP');
+export const logOut = createRoutine('LOG_OUT');
+
 
 export const gmailLogin = createRoutine('GMAIL_LOGIN');
 export const getGmailLogin = createRoutine('GET_GMAIL_LOGIN');
@@ -18,7 +20,6 @@ export const updateTableColumnDefinition = createRoutine(
 // auth
 export const setUsername = createRoutine('SET_USERNAME');
 export const ssoLogIn = createRoutine('SSO_LOG_IN');
-export const logOut = createRoutine('LOG_OUT');
 export const restoreSession = createRoutine('RESTORE_SESSION');
 export const resetSession = createRoutine('RESET_SESSION');
 export const completeNewPassword = createRoutine('COMPLETE_NEW_PASSWORD');

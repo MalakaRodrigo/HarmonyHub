@@ -1,0 +1,43 @@
+// Sidebar.scss
+
+.sidebar {
+    width: 200px; // Make the sidebar thinner
+    transition: width 0.3s ease; // Add smooth transition for width changes
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    li {
+      padding: 15px;
+      border-bottom: 1px solid #eaeaea;
+  
+      &:last-child {
+        border-bottom: none;
+      }
+  
+      &:hover {
+        background-color: #f2f2f2;
+      }
+  
+      .padded-icons-left,
+      .padded-icons-right {
+        margin-right: 10px;
+      }
+    }
+  
+    .active {
+      width: 250px;
+    }
+  
+    &:not(:hover) {
+      ul {
+        text-align: right; // Align items to the right when not hovered
+      }
+    }
+  }
+  
